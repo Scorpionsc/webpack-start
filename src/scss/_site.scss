@@ -1,0 +1,163 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 15px;
+  background-color: #eeeeee;
+  @include HKGrotesk();
+
+  &_white {
+    background-color: #fff;
+  }
+
+  &_main {
+
+    .site__header {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 26px;
+    text-align: center;
+    color: rgb(68, 70, 85);
+    line-height: 1.208;
+    @include HKGrotesk-light();
+
+    span {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      letter-spacing: 6.4px;
+      color: rgb(62, 66, 85);
+      text-transform: uppercase;
+      line-height: 3.625;
+      @include HKGrotesk-bold();
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    z-index: 2;
+    padding:  10px 20px;
+  }
+
+  &__content {
+    flex: 1 0 auto;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    font-size: 10px;
+    color: rgba(68, 70, 85, 0.4);
+    line-height: 2.154;
+    @include HKGrotesk-bold();
+
+    a,
+    a:visited {
+      font-size: 10px;
+      color: rgb(68, 70, 85);
+      line-height: 2.154;
+    }
+  }
+}
+.color1 {
+  color: #f19700;
+}
+.color2 {
+  color: #83ba3a;
+}
+@media (min-width: $phone-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .site {
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+
+      &-layout {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
+
+    &__footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 30px;
+      font-size: 13px;
+
+      a {
+        font-size: 13px;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+          color: #ff802c;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .site {
+    padding: 30px;
+
+    &__title {
+      margin-bottom: 102px;
+      font-size: 48px;
+
+      span { font-size: 16px }
+    }
+
+    &__header {
+      justify-content: space-between;
+      height: 142px;
+      padding: 20px;
+
+      &-layout {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__footer {
+      letter-spacing: 1.3px;
+    }
+  }
+}
+@media (min-width: $desktop-hd) {
+  .site {
+    padding: 55px;
+
+    &__header {
+      padding: 20px calc(50% - 600px);
+    }
+  }
+}
+
